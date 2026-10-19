@@ -1,30 +1,30 @@
 # Upvoid Technologies
 
-A responsive smart-home automation landing page for Upvoid Technologies. The site presents the company, its automation services, contact information, and an interactive AI-style assistant named Nova.
+Upvoid Technologies is a responsive smart-home automation landing page built with React and Vite. It presents the company, automation services, contact information, and a draggable AI-style assistant named Nova.
 
 ## Features
 
-- Responsive landing page for desktop and mobile screens
+- Responsive desktop and mobile layout
 - Fixed glass-effect navigation bar
-- Hero image slideshow with manual controls and automatic rotation
+- Hero image slideshow with automatic rotation and manual controls
+- Animated smart-home hero visuals and status indicator
 - About section with company information and statistics
-- Smart-home service cards:
+- Service cards for:
   - Customizable Smart Home
   - Security & Surveillance
   - Smart Lighting
   - Smart Office
   - Water Automation
   - Home Entertainment
-- Contact and callback enquiry form
-- Contact details and social links in the footer
+- Callback enquiry form
+- Footer with contact and social links
 - Draggable Nova AI assistant with:
   - Expandable chat panel
   - Quick prompt suggestions
-  - Local conversational responses
+  - Local demo responses
   - Mobile-friendly layout
-- Production-ready Vite build
 
-## Technology
+## Tech stack
 
 - React
 - Vite
@@ -32,10 +32,18 @@ A responsive smart-home automation landing page for Upvoid Technologies. The sit
 - CSS
 - HTML
 
+## Requirements
+
+- Node.js 18 or newer
+- npm
+- Internet access for the first dependency installation
+
 ## Project structure
 
+This repository uses its root directory as the application directory. There is no `src/` wrapper folder.
+
 ```text
-src/
+E:\src\
 ├── components/
 │   ├── AIAssistant.jsx
 │   ├── AIAssistant.css
@@ -58,52 +66,62 @@ src/
 │   └── Website images and illustrations
 ├── index.html
 ├── main.jsx
-└── README.md
+├── README.md
+└── .gitignore
 ```
 
-## Requirements
+## Installation
 
-- Node.js 18 or newer
-- npm
+1. Clone the repository:
 
-## Run locally
+   ```powershell
+   git clone https://github.com/Sujalgayakwad/Sujalgayakwad1.git
+   cd Sujalgayakwad1
+   ```
 
-Open a terminal in the project directory:
+2. Install the runtime and build dependencies:
+
+   ```powershell
+   npm install react react-dom vite
+   ```
+
+   The repository currently does not include a `package.json`, so this command installs the dependencies directly in the cloned project. It also creates a local `package.json` and `package-lock.json` for that checkout.
+
+3. Start the development server:
+
+   ```powershell
+   npx vite --host 127.0.0.1
+   ```
+
+4. Open the application in a browser:
+
+   ```text
+   http://127.0.0.1:5173
+   ```
+
+The Vite development server provides hot module replacement, so source changes appear automatically in the browser.
+
+## Production build
+
+Create an optimized production build:
 
 ```powershell
-cd E:\src
-npx vite --host 127.0.0.1
-```
-
-Then open:
-
-```text
-http://127.0.0.1:5173
-```
-
-The development server supports hot module replacement, so changes appear automatically in the browser.
-
-## Create a production build
-
-```powershell
-cd E:\src
 npx vite build
 ```
 
-The generated production files are written to the `dist/` directory.
+The generated files are written to `dist/`.
 
-## Preview the production build
+Preview the production build locally:
 
 ```powershell
-cd E:\src
 npx vite preview --host 127.0.0.1
 ```
 
-## Customizing the project
+## Customization
 
 ### Hero slideshow
 
-Update the image imports and the `images` array in [components/Home.jsx](./components/Home.jsx).
+Update the image imports and `images` array in [components/Home.jsx](./components/Home.jsx).
 
 ### Services
 
@@ -111,14 +129,19 @@ Update the `services` array in [components/Services.jsx](./components/Services.j
 
 ### Contact information
 
-Update the contact links in [components/Footer.jsx](./components/Footer.jsx).
+Update the phone, email, website, and social links in [components/Footer.jsx](./components/Footer.jsx).
 
 ### Nova AI assistant
 
-The assistant currently uses local responses and does not connect to an external AI service. To connect it to a real AI backend, update the `sendMessage` logic in [components/AIAssistant.jsx](./components/AIAssistant.jsx) and add server-side API handling for credentials and requests.
+Nova is currently a front-end demo with local responses. Its interaction logic is in [components/AIAssistant.jsx](./components/AIAssistant.jsx). To connect it to a real AI service, add a server-side API and update the message handling logic. Keep API keys on the server and never place them in browser source code.
 
-## Notes
+## Current limitations
 
-- The callback form currently logs submitted form data in the browser console. It does not send data to a backend.
-- The Nova assistant is a front-end interaction demo and does not call an external AI API.
-- Keep API keys and other secrets on a server or in environment variables; do not place them in browser source files.
+- The callback form currently logs submitted data to the browser console; it does not send the data to a backend.
+- Nova does not call an external AI API.
+- `node_modules/` is excluded from Git. Dependencies must be installed locally after cloning.
+- `dist/` is generated output and can be regenerated with `npx vite build`.
+
+## License
+
+No license has been specified for this project yet.
