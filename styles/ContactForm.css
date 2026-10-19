@@ -1,0 +1,13 @@
+.callback { background: var(--ink); color: #fff; display: grid; gap: 12%; grid-template-columns: .8fr 1.2fr; padding: 120px 10%; }
+.contact-intro .section-label { color: var(--mint); }
+.contact-intro h2 { margin-top: 35px; }
+.contact-intro p { color: #a9bbbc; line-height: 1.7; max-width: 340px; }
+.callback form { display: flex; flex-direction: column; gap: 22px; }
+.form-row { display: grid; gap: 18px; grid-template-columns: 1fr 1fr; }
+.callback label { color: #fff; display: flex; flex-direction: column; font-size: 12px; gap: 9px; }
+.callback input, .callback textarea { background: transparent; border: 0; border-bottom: 1px solid #607276; color: #fff; font: 14px "DM Sans"; outline: none; padding: 10px 0; }
+.callback input:focus, .callback textarea:focus { border-color: var(--mint); }
+.callback input::placeholder, .callback textarea::placeholder { color: #728487; }
+.callback textarea { min-height: 80px; resize: vertical; }
+.callback .primary-button { align-self: flex-start; margin-top: 8px; }
+@media (max-width: 700px) { .callback { grid-template-columns: 1fr; padding: 80px 7%; } .form-row { grid-template-columns: 1fr; } }

@@ -1,0 +1,12 @@
+.about-section { padding: 120px 10%; }
+.content-container { align-items: center; display: grid; gap: 10%; grid-template-columns: 1fr 1fr; margin-top: 42px; }
+.content h2, .services h2, .contact-intro h2 { font-size: clamp(34px, 4vw, 54px); letter-spacing: -.07em; line-height: 1.08; margin: 0 0 26px; }
+.content p { color: var(--muted); line-height: 1.8; max-width: 480px; }
+.about-meta { border-top: 1px solid var(--line); display: flex; gap: 65px; margin-top: 40px; padding-top: 22px; }
+.about-meta div { display: flex; flex-direction: column; gap: 5px; }
+.about-meta strong { font: 700 25px Manrope; }
+.about-meta span { color: var(--muted); font-size: 12px; }
+.image { position: relative; }
+.image img { border-radius: 20px; display: block; max-height: 440px; object-fit: cover; width: 100%; }
+.image-badge { background: var(--mint); border-radius: 50%; bottom: -25px; color: var(--ink); font-size: 12px; font-weight: 700; height: 110px; padding-top: 38px; position: absolute; right: -25px; text-align: center; width: 110px; }
+@media (max-width: 700px) { .about-section { padding: 80px 7%; } .content-container { grid-template-columns: 1fr; gap: 50px; } .image-badge { right: 10px; } }

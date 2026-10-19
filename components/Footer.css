@@ -1,0 +1,12 @@
+.footer { background: #0a1a20; color: #fff; padding: 60px 10% 25px; }
+.footer-container { display: grid; gap: 40px; grid-template-columns: 1fr 1fr; }
+.footer-brand > span { font: 700 28px Manrope; letter-spacing: -.06em; }
+.footer-brand p, .footer-tagline { color: #819395; font-size: 13px; }
+.footer-content p { color: #a9bbbc; font-size: 13px; margin: 0 0 13px; }
+.footer-content a { color: var(--mint); }
+.footer-social { text-align: right; }
+.footer-social h3 { font-size: 13px; margin: 0 0 15px; }
+.social-btn { color: #9db1b2; font-size: 12px; margin-left: 18px; }
+.social-btn:hover { color: var(--mint); }
+.footer-tagline { border-top: 1px solid #ffffff16; margin: 45px 0 0; padding-top: 22px; }
+@media (max-width: 600px) { .footer-container { grid-template-columns: 1fr; } .footer-social { text-align: left; } .social-btn { margin: 0 18px 0 0; } }
