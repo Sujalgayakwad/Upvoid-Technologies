@@ -1,5 +1,7 @@
 # Upvoid Technologies
 
+Repository: [github.com/Sujalgayakwad/Upvoid-Technologies](https://github.com/Sujalgayakwad/Upvoid-Technologies)
+
 Upvoid Technologies is a responsive smart-home automation landing page built with React and Vite. It presents the company, automation services, contact information, and a draggable AI-style assistant named Nova.
 
 ## Features
@@ -75,8 +77,8 @@ E:\src\
 1. Clone the repository:
 
    ```powershell
-   git clone https://github.com/Sujalgayakwad/Sujalgayakwad1.git
-   cd Sujalgayakwad1
+   git clone https://github.com/Sujalgayakwad/Upvoid-Technologies.git
+   cd Upvoid-Technologies
    ```
 
 2. Install the runtime and build dependencies:
