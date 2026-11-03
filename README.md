@@ -1,129 +1,177 @@
-Upvoid Technologies
+# Upvoid Technologies
 
 <p align="center">
-<strong>Building Digital Experiences Through Technology & Innovation</strong>
+  <strong>Intelligence for everyday living.</strong><br />
+  Smart-home automation solutions designed to make everyday spaces more comfortable, connected, and secure.
 </p>
 
 <p align="center">
-A modern, responsive web application built with React, Vite, and Tailwind CSS.
+  <a href="https://github.com/Sujalgayakwad/Upvoid-Technologies">GitHub Repository</a>
 </p>
 
-🚀 About the Project
+---
 
-Upvoid Technologies is a modern web development project designed to present technology services through a clean, interactive, and user-friendly website.
+## Overview
 
-The website provides an organized platform to explore services, learn about the company, view customer reviews, and express interest in available services.
+**Upvoid Technologies** is a React-based website presenting smart-home and connected-living solutions. The site introduces the company, highlights its services, and gives visitors a way to enquire about a project. Its interface uses a rotating hero slideshow, responsive page sections, service cards, and an interactive assistant-style chat panel.
 
-The project focuses on responsive design, smooth animations, reusable React components, and an engaging user experience.
+The project is built with React and Vite, with styling managed through CSS and Tailwind CSS configuration.
 
-✨ Features
-Modern UI Design – Clean and attractive website interface.
-Responsive Layout – Designed for different screen sizes.
-Interactive Navigation – Easy navigation between website sections.
-Hero Section – Engaging landing page experience.
-About Us Section – Introduction to the company.
-Services Section – Presentation of available services.
-Service Detail Pages – Detailed service descriptions, features, and benefits.
-Interest Form – Interface for users to express interest in services.
-Customer Reviews – Dedicated section for displaying reviews.
-Animations – Smooth UI transitions and interactive effects.
-Reusable Components – Organized React component structure.
-🛠️ Technology Stack
-Technology	Purpose
-React.js	Frontend development
-Vite	Development server and build tool
-JavaScript	Application functionality
-Tailwind CSS	Styling and responsive layouts
-Framer Motion	Animations and transitions
-React Router	Client-side navigation
-React Icons	Icon library
-EmailJS	Email integration dependency
-Axios	HTTP requests
-📂 Project Structure
-text
+## Website sections and features
+
+- **Home / hero:** rotating image slideshow with automatic transitions, previous/next controls, slide indicators, and a call to explore services.
+- **About:** company introduction section.
+- **Services:** cards for six smart-living service categories:
+  - Customizable Smart Home
+  - Security & Surveillance
+  - Smart Lighting
+  - Smart Office
+  - Water Automation
+  - Home Entertainment
+- **Contact enquiry:** form fields for name, phone, email, and project details.
+- **Nova AI assistant UI:** floating, draggable chat panel with suggested prompts and conversational placeholder responses.
+- **Navigation and footer:** links to the main page sections and company contact details.
+- **Service detail component:** a service-detail view with feature and benefit lists and an interest modal is present in the source tree.
+
+> **Implementation note:** The contact form currently logs submitted form data to the browser console. The Nova assistant uses a local placeholder response; no AI service is connected in the inspected component. The service-detail component also contains a TODO for real form submission and is not imported by the main app component shown in this repository. Connect these pieces to a backend or service before relying on them for production enquiries or AI responses.
+
+## Tech stack
+
+| Technology | Use |
+| --- | --- |
+| [React 18](https://react.dev/) | Component-based user interface |
+| [Vite 5](https://vite.dev/) | Local development server and production build |
+| JavaScript / JSX | Application logic and components |
+| CSS | Component and page styling |
+| [Tailwind CSS 3](https://tailwindcss.com/) | Utility-first styling configuration and classes |
+| [Framer Motion](https://www.framer.com/motion/) | Motion utilities used by the service-detail component |
+| [React Router](https://reactrouter.com/) | Routing dependency used by the service-detail component |
+| [React Icons](https://react-icons.github.io/react-icons/) | Icon library dependency |
+| [EmailJS](https://www.emailjs.com/) | Email integration dependency (verify/configure before use) |
+| [Axios](https://axios-http.com/) | HTTP client dependency |
+
+## Getting started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (LTS recommended)
+- npm (included with Node.js)
+
+Check your installation:
+
+```bash
+node --version
+npm --version
+```
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Sujalgayakwad/Upvoid-Technologies.git
+cd Upvoid-Technologies
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+Vite prints a local URL in the terminal (typically `http://localhost:5173/`). Open that URL in your browser.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the Vite development server |
+| `npm start` | Starts Vite (same development server) |
+| `npm run build` | Creates an optimized production build in `dist/` |
+| `npm run preview` | Serves the production build locally for preview |
+| `npm run lint` | Runs ESLint checks |
+
+To test the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project structure
+
+The repository uses a relatively flat Vite/React layout:
+
+```text
 Upvoid-Technologies/
-│
-├── public/
-│
-├── src/
-│   ├── assets/
-│   │
-│   ├── components/
-│   │   ├── Aboutus/
-│   │   ├── Footer/
-│   │   ├── Hero/
-│   │   ├── Navbar/
-│   │   ├── Review/
-│   │   └── Services/
-│   │
+├── components/
+│   ├── AIAssistant.jsx
+│   ├── AIAssistant.css
 │   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-│
+│   ├── App.css
+│   ├── Footer.jsx
+│   ├── Footer.css
+│   ├── Home.jsx
+│   ├── Home.css
+│   ├── Navbar.jsx
+│   └── Services.jsx
+├── styles/
+│   ├── About.jsx
+│   ├── About.css
+│   ├── ContactForm.jsx
+│   ├── ContactForm.css
+│   ├── Navbar.css
+│   └── Services.css
+├── img/
+│   └── website images and logo assets
+├── Service Detail Page Component.jsx
 ├── index.html
+├── main.jsx
 ├── package.json
 ├── package-lock.json
-├── tailwind.config.js
 ├── postcss.config.js
+├── tailwind.config.js
 ├── vite.config.js
-├── .eslintrc.cjs
 └── README.md
+```
 
-⚙️ Installation and Setup
+The checked-in `dist/` directory contains a built site. For normal development, edit the source files and generate a fresh build with `npm run build`.
 
-Follow these steps to run the project locally.
+## Customization
 
-1. Clone the repository
-bash
-git clone https://github.com/Sujalgayakwad/Upvoid-Technologies.git
+- **Hero slideshow:** update the image imports and `images` array in `components/Home.jsx`.
+- **Service cards:** edit the `services` array in `components/Services.jsx` and replace the corresponding images in `img/`.
+- **Navigation and page composition:** edit `components/Navbar.jsx` and `components/App.jsx`.
+- **Contact form behavior:** update `handleSubmit` in `styles/ContactForm.jsx` to send validated data to your chosen backend or form service.
+- **Assistant behavior:** replace the placeholder reply logic in `components/AIAssistant.jsx` with a secure server-side API integration. Do not expose private API keys in frontend code.
+- **Visual styling:** update the CSS files under `components/` and `styles/`, along with `tailwind.config.js` where applicable.
 
-2. Navigate to the project directory
-bash
-cd Upvoid-Technologies
+## Production considerations
 
-3. Install dependencies
-bash
-npm install
+Before deploying the site or accepting real customer enquiries:
 
-4. Start the development server
-bash
-npm run dev
+1. Connect the contact form to a backend or trusted form provider and add appropriate validation and spam protection.
+2. Connect the assistant to a real service only through a secure backend; the current component is a UI demonstration.
+3. Review the service-detail component imports and routing setup before enabling service detail URLs.
+4. Replace placeholder social links with the company's official profiles.
+5. Review page metadata, favicon paths, accessibility, and mobile layouts.
+6. Run `npm run lint` and `npm run build` before publishing.
 
-5. Open in your browser
+## Repository
 
-Vite will display a local URL, usually:
+- **GitHub:** https://github.com/Sujalgayakwad/Upvoid-Technologies
+- **Default branch:** `main`
 
-text
-http://localhost:5173/
+## Maintainer
 
+**Sujal Gayakwad** — [@Sujalgayakwad](https://github.com/Sujalgayakwad)
 
-Open the URL in your browser to view the application.
-
-📦 Available Commands
-Command	Description
-npm run dev	Starts the development server
-npm run build	Creates a production build
-npm run preview	Previews the production build
-npm run lint	Runs ESLint checks
-🌐 Repository
-
-GitHub:
-https://github.com/Sujalgayakwad/Upvoid-Technologies
-
-🔮 Future Improvements
-Backend integration for dynamic content.
-Functional contact and service inquiry forms.
-Improved SEO and performance optimization.
-Additional service pages.
-Enhanced accessibility.
-Deployment and production optimization.
-👨‍💻 Developer
-
-Sujal Gayakwad
-
-GitHub: @Sujalgayakwad
+---
 
 <p align="center">
-<strong>Upvoid Technologies</strong><br/>
-Turning Ideas Into Digital Experiences.
+  Made for smarter, more connected everyday living.
 </p>
